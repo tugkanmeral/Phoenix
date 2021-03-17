@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.1.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Phoenix.Live.Business.Abstraction\Phoenix.Live.Business.Abstraction.csproj" />
+    <ProjectReference Include="..\Phoenix.Live.DataAccess.Abstraction\Phoenix.Live.DataAccess.Abstraction.csproj" />
+    <ProjectReference Include="..\Phoenix.Live.DataAccess\Phoenix.Live.DataAccess.csproj" />
+    <ProjectReference Include="..\Phoenix.Live.Entity\Phoenix.Live.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

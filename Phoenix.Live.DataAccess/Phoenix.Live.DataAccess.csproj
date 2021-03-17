@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Phoenix.Live.DataAccess.Abstraction\Phoenix.Live.DataAccess.Abstraction.csproj" />
+    <ProjectReference Include="..\Phoenix.Live.Entity\Phoenix.Live.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

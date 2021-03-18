@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Phoenix.Live.WebApi
+namespace Phoenix.Middleware
 {
     public class CustomMiddleware
     {
@@ -18,7 +17,7 @@ namespace Phoenix.Live.WebApi
 
         public async Task InvokeAsync(HttpContext context)
         {
-            Console.WriteLine("Custom middleware çalıştı");
+            Console.WriteLine("Custom middleware ran");
 
             // Call the next delegate/middleware in the pipeline
             await _next(context);

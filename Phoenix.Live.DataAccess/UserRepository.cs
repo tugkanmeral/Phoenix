@@ -11,5 +11,14 @@ namespace Phoenix.Live.DataAccess
         {
 
         }
+
+        /// <summary>
+        ///  Use this constructor to take advantage of UoW of DbContext which provided by EntityFrameworkCore
+        /// </summary>
+        /// <param name="dbContext">DatabaseContext</param>
+        public UserRepository(DatabaseContext dbContext) : base(dbContext)
+        {
+
+        }
     }
 }

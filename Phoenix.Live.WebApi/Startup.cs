@@ -14,6 +14,7 @@ using Phoenix.Live.Business.Concretes;
 using Phoenix.Live.Business.DependencyInjection;
 using Phoenix.Live.DataAccess;
 using Phoenix.Live.DataAccess.Abstraction;
+using Phoenix.Middleware;
 using Phoenix.Proxy;
 using System;
 using System.Collections.Generic;

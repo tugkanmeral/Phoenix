@@ -14,8 +14,6 @@
     <ProjectReference Include="..\Decor\Decor.csproj" />
     <ProjectReference Include="..\Phoenix.Live.Business.Abstraction\Phoenix.Live.Business.Abstraction.csproj" />
     <ProjectReference Include="..\Phoenix.Live.Business\Phoenix.Live.Business.csproj" />
-    <ProjectReference Include="..\Phoenix.Live.DataAccess.Abstraction\Phoenix.Live.DataAccess.Abstraction.csproj" />
-    <ProjectReference Include="..\Phoenix.Live.DataAccess\Phoenix.Live.DataAccess.csproj" />
     <ProjectReference Include="..\Phoenix.Live.Entity\Phoenix.Live.Entity.csproj" />
     <ProjectReference Include="..\Phoenix\Phoenix.csproj" />
   </ItemGroup>

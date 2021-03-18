@@ -1,4 +1,5 @@
-﻿using Phoenix.Attributes;
+﻿using Microsoft.EntityFrameworkCore;
+using Phoenix.Attributes;
 using Phoenix.LayerBases.DataAccess;
 using Phoenix.Live.DataAccess.Abstraction;
 using Phoenix.Live.Entity;
@@ -12,6 +13,14 @@ namespace Phoenix.Live.DataAccess
         public PasswordRepository() : base(new DatabaseContext())
         {
 
+        }
+
+        /// <summary>
+        ///  Use this constructor to take advantage of UoW of DbContext which provided by EntityFrameworkCore
+        /// </summary>
+        /// <param name="dbContext">DatabaseContext</param>
+        public PasswordRepository(DatabaseContext dbContext) : base(dbContext)
+        {
         }
 
         public override Password Get(Expression<Func<Password, bool>> filter)

@@ -9,7 +9,7 @@ namespace Phoenix.Live.Business.Concretes
 {
     public class UserManager : ServiceBase<User, int>, IUserService
     {
-        public UserManager() : base(new UserRepository())
+        public UserManager(IUserRepository userRepository) : base(userRepository)
         {
         }
     }

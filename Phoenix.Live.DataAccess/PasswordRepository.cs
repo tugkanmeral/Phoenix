@@ -10,11 +10,6 @@ namespace Phoenix.Live.DataAccess
 {
     public class PasswordRepository : RepositoryBase<Password, int>, IPasswordRepository
     {
-        public PasswordRepository() : base(new DatabaseContext())
-        {
-
-        }
-
         /// <summary>
         ///  Use this constructor to take advantage of UoW of DbContext which provided by EntityFrameworkCore
         /// </summary>

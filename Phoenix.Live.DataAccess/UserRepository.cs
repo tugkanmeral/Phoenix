@@ -7,11 +7,6 @@ namespace Phoenix.Live.DataAccess
 {
     public class UserRepository : RepositoryBase<User, int>, IUserRepository
     {
-        public UserRepository() : base(new DatabaseContext())
-        {
-
-        }
-
         /// <summary>
         ///  Use this constructor to take advantage of UoW of DbContext which provided by EntityFrameworkCore
         /// </summary>

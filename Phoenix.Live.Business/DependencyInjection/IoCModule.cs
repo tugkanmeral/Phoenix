@@ -1,15 +1,10 @@
-﻿using Autofac;
-using Phoenix.Live.Business.Abstraction;
+﻿using Phoenix.Live.Business.Abstraction;
 using Phoenix.Live.Business.Concretes;
 using Phoenix.Live.DataAccess;
 using Phoenix.Live.DataAccess.Abstraction;
-using Castle.DynamicProxy;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Autofac.Extras.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
 using Phoenix.DependencyInjection;
+using Phoenix.LayerBases.DataAccess;
 
 namespace Phoenix.Live.Business.DependencyInjection
 {
@@ -22,6 +17,8 @@ namespace Phoenix.Live.Business.DependencyInjection
             serviceCollection.RegisterTransient<IUserService, UserManager>();
             serviceCollection.RegisterTransient<IPasswordService, PasswordManager>();
             serviceCollection.RegisterTransient<IFakeService, FakeManager>();
+
+            serviceCollection.AddDbContext<DatabaseContext>(contextLifetime: ServiceLifetime.Transient, optionsLifetime: ServiceLifetime.Transient);
         }
     }
 }

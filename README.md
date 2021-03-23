@@ -1,2 +1,2 @@
 # Phoenix
-A framework trail
+A framework trial

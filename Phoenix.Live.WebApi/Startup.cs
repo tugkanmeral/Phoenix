@@ -25,7 +25,7 @@ namespace Phoenix.Live.WebApi
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment webEnv, IHostEnvironment env)
         {
             Configuration = configuration;
         }

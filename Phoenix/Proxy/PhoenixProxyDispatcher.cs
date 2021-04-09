@@ -20,7 +20,7 @@ namespace Phoenix.Proxy
             if (logAspect)
                 Console.WriteLine($"{DateTime.Now} Before {targetMethod.Name} run");
 
-            object? result = null;
+            object result = null;
             try
             {
                 result = targetMethod.Invoke(_decorated, args);

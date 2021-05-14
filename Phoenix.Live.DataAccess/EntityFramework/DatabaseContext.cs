@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Phoenix.LayerBases.DataAccess;
+using Phoenix.LayerBases.DataAccess.EntityFramework;
 using Phoenix.Live.Entity;
 
-namespace Phoenix.Live.DataAccess
+namespace Phoenix.Live.DataAccess.EntityFramework
 {
     public class DatabaseContext : DbContextBase
     {

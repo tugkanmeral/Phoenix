@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 using System.Text;
 
 
-namespace Phoenix.LayerBases.DataAccess
+namespace Phoenix.LayerBases.DataAccess.EntityFramework
 {
-    public abstract class RepositoryBase<TEntity, TId> : IRepository<TEntity, TId>
+    public class EfRepositoryBase<TEntity, TId> : IEfRepository<TEntity, TId>
         where TEntity : class, IEntity<TId>, new()
     {
         private DbContext _context;
-        public RepositoryBase(DbContextBase context)
+        public EfRepositoryBase(DbContextBase context)
         {
             _context = context;
         }

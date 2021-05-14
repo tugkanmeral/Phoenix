@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Phoenix.Utils;
 
-namespace Phoenix.LayerBases.DataAccess
+namespace Phoenix.LayerBases.DataAccess.EntityFramework
 {
     public abstract partial class DbContextBase : DbContext
     {

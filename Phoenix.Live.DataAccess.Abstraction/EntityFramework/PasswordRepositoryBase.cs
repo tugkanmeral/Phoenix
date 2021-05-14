@@ -1,9 +1,9 @@
-﻿using Phoenix.LayerBases.DataAccess;
+﻿using Phoenix.LayerBases.DataAccess.EntityFramework;
 using Phoenix.Live.Entity;
 
-namespace Phoenix.Live.DataAccess.Abstraction
+namespace Phoenix.Live.DataAccess.Abstraction.EntityFramework
 {
-    public abstract class PasswordRepositoryBase : RepositoryBase<Password, int>
+    public abstract class PasswordRepositoryBase : EfRepositoryBase<Password, int>
     {
         public PasswordRepositoryBase(DbContextBase context) : base(context)
         {

@@ -1,11 +1,11 @@
 ﻿using Phoenix.Attributes;
-using Phoenix.LayerBases.DataAccess;
-using Phoenix.Live.DataAccess.Abstraction;
+using Phoenix.LayerBases.DataAccess.EntityFramework;
+using Phoenix.Live.DataAccess.Abstraction.EntityFramework;
 using Phoenix.Live.Entity;
 
-namespace Phoenix.Live.DataAccess
+namespace Phoenix.Live.DataAccess.EntityFramework
 {
-    public class UserRepository : RepositoryBase<User, int>, IUserRepository
+    public partial class UserRepository : EfRepositoryBase<User, int>, IUserRepository
     {
         /// <summary>
         ///  Use this constructor to take advantage of UoW of DbContext which provided by EntityFrameworkCore

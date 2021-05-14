@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phoenix.Live.DataAccess.Abs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Phoenix.Live.Business.Abstraction", "Phoenix.Live.Business.Abstraction\Phoenix.Live.Business.Abstraction.csproj", "{612D4C0B-F3BE-402E-BE6B-DD7526D39821}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{93A9656C-EB4D-425E-A362-283C489D372C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{612D4C0B-F3BE-402E-BE6B-DD7526D39821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{612D4C0B-F3BE-402E-BE6B-DD7526D39821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{612D4C0B-F3BE-402E-BE6B-DD7526D39821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,7 @@ Global
 		{F402B686-51C0-49AE-AF65-987811B4341E} = {179E3851-91F1-4E4F-8F79-B144F278817F}
 		{7F898E83-27EF-4933-A708-50BDFB0C1526} = {179E3851-91F1-4E4F-8F79-B144F278817F}
 		{612D4C0B-F3BE-402E-BE6B-DD7526D39821} = {179E3851-91F1-4E4F-8F79-B144F278817F}
+		{1B398FB1-142B-44AB-8B1B-2F93AB9F0D6C} = {93A9656C-EB4D-425E-A362-283C489D372C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FC7D448-8825-493E-B7FA-0DA3A3DB03C2}

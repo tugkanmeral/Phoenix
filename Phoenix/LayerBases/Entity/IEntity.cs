@@ -6,6 +6,6 @@ namespace Phoenix.LayerBases.Entity
 {
     public interface IEntity<TId>
     {
-        public TId Id { get; set; }
+        TId Id { get; set; }
     }
 }

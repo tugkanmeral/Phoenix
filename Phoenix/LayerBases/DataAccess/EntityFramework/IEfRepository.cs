@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Phoenix.LayerBases.DataAccess
+namespace Phoenix.LayerBases.DataAccess.EntityFramework
 {
-    public interface IRepository<T, TId> where T : class, IEntity<TId>, new()
+    public interface IEfRepository<T, TId> 
+        where T : class, IEntity<TId>, new()
     {
         T Get(Expression<Func<T, bool>> filter = null);
         IEnumerable<T> GetList(Expression<Func<T, bool>> filter = null);

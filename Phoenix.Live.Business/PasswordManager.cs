@@ -3,6 +3,7 @@ using Phoenix.LayerBases.Business;
 using Phoenix.Live.Business.Abstraction;
 using Phoenix.Live.DataAccess;
 using Phoenix.Live.DataAccess.Abstraction;
+using Phoenix.Live.DataAccess.Abstraction.EntityFramework;
 using Phoenix.Live.Entity;
 using System.Linq;
 
@@ -12,6 +13,13 @@ namespace Phoenix.Live.Business.Concretes
     {
         public PasswordManager(IPasswordRepository passwordRepository) : base(passwordRepository)
         {
+        }
+
+        public string Teststring = "";
+
+        public string ReturnMessage()
+        {
+            return Teststring;
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Phoenix.LayerBases.DataAccess.MongoDb
 {
-    public interface IMongoRepository<TDocument>
+    public interface IMongoRepository<TDocument> : IRepository<TDocument>
         where TDocument : IDocument
     {
         public void StartTransaction();

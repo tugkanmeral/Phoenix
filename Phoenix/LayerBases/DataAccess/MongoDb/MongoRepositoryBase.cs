@@ -240,6 +240,22 @@ namespace Phoenix.LayerBases.DataAccess.MongoDb
         {
             _collection.DeleteMany(Context.Session, filterExpression);
         }
+
         #endregion DELETE
+
+        public void Add(TDocument entity)
+        {
+            Insert(entity);
+        }
+
+        public void Update(TDocument entity)
+        {
+            ReplaceOne(e => e._id == entity._id, entity);
+        }
+
+        public void Delete(TDocument entity)
+        {
+            DeleteOne(e => e._id == entity._id);
+        }
     }
 }

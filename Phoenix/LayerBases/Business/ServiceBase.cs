@@ -1,4 +1,5 @@
 ﻿using Phoenix.Aspects.Logging;
+using Phoenix.LayerBases.DataAccess;
 using Phoenix.LayerBases.DataAccess.EntityFramework;
 using Phoenix.LayerBases.Entity;
 using System;
@@ -11,8 +12,8 @@ namespace Phoenix.LayerBases.Business
     public abstract class ServiceBase<T, TId> : IService<T>
         where T : class, IEntity<TId>, new()
     {
-        public IEfRepository<T, TId> _repository;
-        public ServiceBase(IEfRepository<T, TId> repository)
+        public IRepository<T> _repository;
+        public ServiceBase(IRepository<T> repository)
         {
             _repository = repository;
         }

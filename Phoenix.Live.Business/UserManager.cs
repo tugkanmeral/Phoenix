@@ -16,7 +16,7 @@ namespace Phoenix.Live.Business.Concretes
         }
 
         Mongo.IUserRepository _userRepository;
-        public UserManager(Mongo.IUserRepository userRepository) : base(null)
+        public UserManager(Mongo.IUserRepository userRepository) : base(userRepository)
         {
             _userRepository = userRepository;
         }

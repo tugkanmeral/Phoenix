@@ -37,17 +37,6 @@ namespace Phoenix.DependencyInjection
 
         private static void AddWithProxy<TService, TImplementation>(IServiceCollection services, ServiceLifetime serviceLifetime)
         {
-            //object instance = Activator.CreateInstance(typeof(TImplementation));
-            //var service = new ServiceDescriptor(typeof(TService), DecoratedFactory, serviceLifetime);
-            //services.Add(service);
-
-            //object DecoratedFactory(IServiceProvider serviceProvider)
-            //{
-            //    var implementation = PhoenixProxyDispatcher<TService>.Resolve((TService)instance);
-
-            //    return implementation;
-            //}
-
             var descriptor = ServiceDescriptor.Describe(
                 typeof(TService),
                 sp =>

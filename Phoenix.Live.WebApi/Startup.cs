@@ -66,7 +66,8 @@ namespace Phoenix.Live.WebApi
 
             app.UseAuthorization();
 
-            app.UseMiddleware<HttpRequestLogger>();
+            if (env.IsDevelopment())
+                app.UseMiddleware<HttpRequestLogger>();
 
             app.UseEndpoints(endpoints =>
             {

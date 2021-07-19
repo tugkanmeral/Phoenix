@@ -24,18 +24,16 @@ namespace Phoenix.Middleware
 
             context.Response.OnStarting(() => {
                 watch.Stop();
-
-                Console.WriteLine($"Response time : {watch.ElapsedMilliseconds}ms");
-
                 return Task.CompletedTask;
             });
 
             context.Response.OnCompleted(() =>
             {
-                var logBuilder = new StringBuilder();
-                logBuilder.AppendJoin(" ", context.Request.Path, context.Request.Method, context.Response.StatusCode);
+                var logMsgBuilder = new StringBuilder();
+                logMsgBuilder.Append($"Response time : {watch.ElapsedMilliseconds}ms\n");
+                logMsgBuilder.AppendJoin(" ", context.Request.Path, context.Request.Method, context.Response.StatusCode);
 
-                Console.WriteLine(logBuilder.ToString());
+                Console.WriteLine(logMsgBuilder.ToString());
 
                 return Task.CompletedTask;
             });

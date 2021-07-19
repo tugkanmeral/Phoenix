@@ -11,15 +11,15 @@ namespace Phoenix.Live.Business.Concretes
 {
     public class UserManager : ServiceBase<User, int>, IUserService
     {
-        public UserManager(EF.IUserRepository userRepository) : base(userRepository)
-        {
-        }
-
         // Eğer IUserRepository cannot resolve benzeri bir hata alıyorsa bu constructor'ı yukarı çıkar o şekilde çözülüyor. Bunu düzelt!
         Mongo.IUserRepository _userRepository;
         public UserManager(Mongo.IUserRepository userRepository) : base(userRepository)
         {
             _userRepository = userRepository;
+        }
+
+        public UserManager(EF.IUserRepository userRepository) : base(userRepository)
+        {
         }
 
         public void DeleteUserFromMongo(User user)

@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Phoenix.Live.Business.Concretes;
+//using Phoenix.Live.Business.Concretes;
 
 namespace NUnitTest
 {
@@ -13,13 +13,13 @@ namespace NUnitTest
         [Test]
         public void Test1()
         {
-            var EXPECTED_VALUE = "TUGKAN";
+            //var EXPECTED_VALUE = "TUGKAN";
 
-            PasswordManager fakeManager = new PasswordManager(null) { Teststring = "TUGKAN"};
+            //PasswordManager fakeManager = new PasswordManager(null) { Teststring = "TUGKAN"};
             
-            var result = fakeManager.ReturnMessage();
+            //var result = fakeManager.ReturnMessage();
 
-            Assert.AreEqual(EXPECTED_VALUE, result);
+            //Assert.AreEqual(EXPECTED_VALUE, result);
         }
 
         [TearDown]

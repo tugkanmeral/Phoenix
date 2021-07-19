@@ -27,7 +27,7 @@ namespace Phoenix.Proxy
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{DateTime.Now} Exception: {ex.Message}");
+                Console.WriteLine($"{DateTime.Now} Exception: {ex.Message} Detail: {ex.InnerException}");
             }
 
             if (logAspect)

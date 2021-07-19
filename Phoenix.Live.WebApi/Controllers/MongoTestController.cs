@@ -24,7 +24,7 @@ namespace Phoenix.Live.WebApi.Controllers
         [HttpGet("{id}")]
         public User Get(string id)
         {
-            return _userService.GetUserFromMongo(MongoDB.Bson.ObjectId.Parse(id));
+            return _userService.GetUserFromMongo(id);
         }
 
         // POST api/<MongoTestController>
@@ -45,7 +45,7 @@ namespace Phoenix.Live.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(string id)
         {
-            User user = _userService.GetUserFromMongo(MongoDB.Bson.ObjectId.Parse(id));
+            User user = _userService.GetUserFromMongo(id);
             _userService.DeleteUserFromMongo(user);
         }
 

@@ -15,6 +15,7 @@ namespace Phoenix.Live.Business.Concretes
         {
         }
 
+        // Eğer IUserRepository cannot resolve benzeri bir hata alıyorsa bu constructor'ı yukarı çıkar o şekilde çözülüyor. Bunu düzelt!
         Mongo.IUserRepository _userRepository;
         public UserManager(Mongo.IUserRepository userRepository) : base(userRepository)
         {
@@ -26,9 +27,9 @@ namespace Phoenix.Live.Business.Concretes
             _userRepository.DeleteOne(u => u._id == user._id);
         }
 
-        public User GetUserFromMongo(ObjectId id)
+        public User GetUserFromMongo(string id)
         {
-            return _userRepository.Get(u => u._id == id.ToString());
+            return _userRepository.Get(u => u._id == id);
         }
 
         public void InsertUserToMongo(User user)
@@ -56,6 +57,7 @@ namespace Phoenix.Live.Business.Concretes
             catch (System.Exception ex)
             {
                 _userRepository.RollBack();
+                throw ex;
             }
             
         }

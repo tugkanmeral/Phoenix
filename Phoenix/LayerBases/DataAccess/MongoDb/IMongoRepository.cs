@@ -38,13 +38,13 @@ namespace Phoenix.LayerBases.DataAccess.MongoDb
         Task<TDocument> GetAsync(Expression<Func<TDocument, bool>> filterExpression);
         Task<TDocument> GetAsyncTransactional(Expression<Func<TDocument, bool>> filterExpression);
 
-        TDocument Get(Expression<Func<TDocument, bool>> filterExpression);
+        new TDocument Get(Expression<Func<TDocument, bool>> filterExpression);
         TDocument GetTransactional(Expression<Func<TDocument, bool>> filterExpression);
 
         Task<IEnumerable<TDocument>> GetListAsync(Expression<Func<TDocument, bool>> filterExpression);
         Task<IEnumerable<TDocument>> GetListAsyncTransactional(Expression<Func<TDocument, bool>> filterExpression);
 
-        IEnumerable<TDocument> GetList(Expression<Func<TDocument, bool>> filterExpression);
+        new IEnumerable<TDocument> GetList(Expression<Func<TDocument, bool>> filterExpression);
         IEnumerable<TDocument> GetListTransactional(Expression<Func<TDocument, bool>> filterExpression);
 
         void ReplaceOneAsync(Expression<Func<TDocument, bool>> filterExpression, TDocument document);

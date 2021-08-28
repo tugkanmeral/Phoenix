@@ -1,24 +1,23 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
 
 namespace Phoenix.Utils
 {
     [Serializable]
     public class Copier<T> where T : class
     {
-        public T ShallowCopy()
+        public virtual T ShallowCopy()
         {
             return (T)this.MemberwiseClone();
         }
-        public T DeepCopy()
+        public virtual T DeepCopy()
         {
             using (var ms = new MemoryStream())
             {
-                var formatter = new BinaryFormatter();
-                formatter.Serialize(ms, this);
-                ms.Position = 0;
-                return (T)formatter.Deserialize(ms);
+                string serializedObj = JsonSerializer.Serialize(this, typeof(T));
+                return JsonSerializer.Deserialize<T>(serializedObj);
             }
         }
     }

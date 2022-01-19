@@ -17,10 +17,10 @@ namespace Phoenix.Live.Business.DependencyInjection
         public IoCModule(IServiceCollection serviceCollection)
         {
             serviceCollection.AddSingleton(new MongoDbContext());
-            serviceCollection.RegisterScoped<MongoA.IUserRepository, Mongo.UserRepository>();
-            serviceCollection.RegisterScoped<EFA.IPasswordRepository, EF.PasswordRepository>();
-            serviceCollection.RegisterTransient<IUserService, UserManager>();
+            serviceCollection.RegisterTransient<MongoA.IUserRepository, Mongo.UserRepository>();
+            serviceCollection.RegisterTransient<MongoA.IPasswordRepository, Mongo.PasswordRepository>();
             serviceCollection.RegisterTransient<IPasswordService, PasswordManager>();
+            serviceCollection.RegisterTransient<IUserService, UserManager>();
             serviceCollection.RegisterTransient<IFakeService, FakeManager>();
 
             serviceCollection.AddDbContext<EF.DatabaseContext>(contextLifetime: ServiceLifetime.Transient, optionsLifetime: ServiceLifetime.Transient);
